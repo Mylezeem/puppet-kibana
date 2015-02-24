@@ -1,0 +1,10 @@
+[Unit]
+Description=Kibana
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c "cd /opt/kibana/kibana-4.0.0-linux-x64 && ./bin/kibana"
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
